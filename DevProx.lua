@@ -4925,8 +4925,8 @@ local text =  [[
 ❗️🚸 ⌯ ◟ [Source developer](http://t.me/QQQAQ) ◝
 ❗️🚸 ⌯ ◝ [مطور السورس](http://t.me/QQQAQ) ◟
 〰️➖〰️➖〰️➖〰️➖〰️
-❗️📯 ⌯ ◟ [Blocked connection](http://t.me/IQA_bot) ◝
-❗️📯 ⌯ ◝ [تواصل المحظورين](http://t.me/IQA_bot) ◟
+❗️📯 ⌯ ◟ [Blocked connection](http://t.me/q3qbot) ◝
+❗️📯 ⌯ ◝ [تواصل المحظورين](http://t.me/q3qbot) ◟
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🔅 ⌯ ◟ [Explanation Source](https://t.me/Exp_Dev) ◝
 ❗️🔅 ⌯ ◝ [شروحات السورس](https://t.me/Exp_Dev) ◟
