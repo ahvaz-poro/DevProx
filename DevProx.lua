@@ -4918,8 +4918,8 @@ if text:match("^source$") or text:match("^Source$") or text:match("^اصدار$"
 local text =  [[
 - نسخة سورس ديف بروكس خاصه بالمطور : @QQQAQ ♥️
 〰️➖〰️➖〰️➖〰️➖〰️
-- Ch : @vip_es  🗞📌
-- Source Ch : @Dev_Prox
+- Ch : [@vip_es]  🗞📌
+- Source Ch : [@Dev_Prox]
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
