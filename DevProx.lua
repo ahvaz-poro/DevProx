@@ -4916,24 +4916,10 @@ end
 --     Source DevProx     --
 if text:match("^source$") or text:match("^Source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") or text:match("^ياسورس$") then 
 local text =  [[
-❗️🎗 ⌯ ◟ [Source DevProx](https://t.me/Dev_Prox) ◝
-❗️🎗 ⌯ ◝ [سورس ديف بروكس](https://t.me/Dev_Prox) ◟
+- نسخة سورس ديف بروكس خاصه بالمطور : @QQQAQ ♥️
 〰️➖〰️➖〰️➖〰️➖〰️
-❗️📣 ⌯ ◟ [Source Channel](https://t.me/Dev_Prox) ◝
-❗️📣 ⌯ ◝ [قناة السورس](https://t.me/Dev_Prox) ◟
-〰️➖〰️➖〰️➖〰️➖〰️
-❗️🚸 ⌯ ◟ [Source developer](http://t.me/QQQAQ) ◝
-❗️🚸 ⌯ ◝ [مطور السورس](http://t.me/QQQAQ) ◟
-〰️➖〰️➖〰️➖〰️➖〰️
-❗️📯 ⌯ ◟ [Blocked connection](http://t.me/q3qbot) ◝
-❗️📯 ⌯ ◝ [تواصل المحظورين](http://t.me/q3qbot) ◟
-〰️➖〰️➖〰️➖〰️➖〰️
-❗️🔅 ⌯ ◟ [Explanation Source](https://t.me/Exp_Dev) ◝
-❗️🔅 ⌯ ◝ [شروحات السورس](https://t.me/Exp_Dev) ◟
-〰️➖〰️➖〰️➖〰️➖〰️
-❗️🔑 ⌯ ◟ [Click here to install](https://t.me/Dev_Prox/573) ◝
-❗️🔑 ⌯ [اضغط هنا لتنصيب السورس](https://t.me/Dev_Prox/573) ◟
-〰️➖〰️➖〰️➖〰️➖〰️
+- Ch : @vip_es  🗞📌
+- Source Ch : @Dev_Prox
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
