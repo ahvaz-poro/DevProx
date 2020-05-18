@@ -10303,7 +10303,7 @@ local TXTAR = "❗️🎒 ⌯ اعدادات المجموعة :\n〰️➖〰️
 .."❗️🧷 ⌯ خٱصية ٱڵتكرٱر ⌯» "..floodstatus.."\n"
 .."❗️📎 ⌯ عدد ٱڵتكرٱر ⌯» [ "..flood_m.." ]\n"
 .."️❗️🧮 ⌯ عدد ٱڵسبٱم ⌯» [ "..spam_c.." ]\n"
-.."〰️➖〰️➖〰️➖〰️➖〰️\n❗️🏵 ⌯ CH ⌯» [@Dev_Prox]\n"
+.."〰️➖〰️➖〰️➖〰️➖〰️\n❗️🏵 ⌯ CH ⌯» [@vip_es]\n"
 local TXTEN = "⚙ Group Settings :\n\n"
 .."◾️ *Strict Mode* : "..strict.."\n"
 .."◾️ *Group lock All* : "..mute_all.."\n"
@@ -11494,7 +11494,7 @@ local text =  [[
 🗂 ⌯ {م8} ⌯» اوامـر المطورين
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]] 
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11558,7 +11558,7 @@ local text =  [[
 ⏰ ⌯ الكل بالساعات + عدد الساعات
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11628,7 +11628,7 @@ local text =  [[
 💬 ⌯ جلب • حذف ⌯» الترحيب
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11697,7 +11697,7 @@ local text =  [[
 🔑 ⌯ كشف ⌯» بالرد • بالمعرف • بالايدي
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11754,7 +11754,7 @@ local text =  [[
 🖍 ⌯ ضع ⌯» عدد الاحرف + العدد
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11799,7 +11799,7 @@ local text =  [[
 🔱 ⌯ رفع • تنزيل ⌯» منشئ اساسي
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11846,7 +11846,7 @@ local text =  [[
 🎼 ⌯ المغادره التلقائيه ⌯» تفعيل • تعطيل
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11895,7 +11895,7 @@ local text =  [[
 🔱 ⌯ حذف المنشئين الاساسيين
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11991,7 +11991,7 @@ local text =  [[
 🧧 ⌯ قائمه المنع العام
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏆 ⌯ Dev ⌯» ]]..SUDOUSERNAME..[[ 
-❗️🏵 ⌯ CH ⌯» @Dev_Prox
+❗️🏵 ⌯ CH ⌯» @vip_es
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
