@@ -2296,6 +2296,29 @@ if DevAbs:get(DevProx.."text_repall"..msg.content_.text_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, DevAbs:get(DevProx.."text_repall"..msg.content_.text_) ,  1, "md")
 end
 end 
+if msg.content_.text_  or msg.content_.video_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.animation_ then
+local content_text = DevAbs:get(DevProx.."add:repmusic"..msg.sender_user_id_)
+if content_text == 'save_repmusic' then
+DevAbs:del(DevProx.."add:repmusic"..msg.sender_user_id_)
+local content_text = DevAbs:get(DevProx.."addreply3:"..msg.sender_user_id_)
+if msg.content_.video_ then
+DevAbs:set(DevProx.."video_repmusic"..content_text, msg.content_.video_.video_.persistent_id_)
+end
+if msg.content_.voice_ then
+DevAbs:set(DevProx.."voice_repmusic"..content_text, msg.content_.voice_.voice_.persistent_id_)
+end
+DevAbs:sadd('repmusic_sudo',content_text)
+Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️☻ تـۖم حفـۨظ ٱلٱغنيه ٱڵـجـډيـډة', 1, 'md') 
+DevAbs:del(DevProx.."addreply3:"..msg.sender_user_id_)
+return false end end
+if msg.content_.text_ and not DevAbs:get(DevProx..'lock_reeeep'..msg.chat_id_) then
+if DevAbs:get(DevProx.."video_repmusic"..msg.content_.text_) then
+sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, DevAbs:get(DevProx.."video_repmusic"..msg.content_.text_))
+end
+if DevAbs:get(DevProx.."voice_repmusic"..msg.content_.text_)  then
+sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, DevAbs:get(DevProx.."voice_repmusic"..msg.content_.text_))
+end
+end 
 -- end functions DevProx --
 --      Anti FLood       -- 
 --      Flood Max        --
@@ -4357,6 +4380,74 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,ABS_PROX, 1, 'md')
 end
 DevAbs:set(DevProx..'bot:l:id'..msg.chat_id_,true)
 end  
+if text == 'رياضيات' or text == 'الرياضيات' then
+if not DevAbs:get(DevProx..'bot:lock_geam'..msg.chat_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️🚸 ⌯ ٱلٱڵعٱب معطڵة \n❗️🔑 ⌯ ٱرسڵ ( تفعيل الالعاب ) ڵڵعب ', 1, 'md')
+else
+DevAbs2 = {'9','2','9','5','4','25','10','17','15','39','5','16','63',};
+name = DevAbs2[math.random(#DevAbs2)]
+DevAbs:set(DevProx..'bot:bkbk6'..msg.chat_id_,name)
+DevAbs:del(DevProx..'bot:l:id'..msg.chat_id_)
+name = string.gsub(name,'9','2 + 7 = ?')
+name = string.gsub(name,'2','5 - 3 = ?')
+name = string.gsub(name,'9','2 + 2 + 5 = ?')
+name = string.gsub(name,'5','8 - 3 = ?')
+name = string.gsub(name,'4','40 ÷ 10 = ?')
+name = string.gsub(name,'25','30 - 5 = ?')
+name = string.gsub(name,'10','100 ÷ 10 = ?')
+name = string.gsub(name,'17','10 + 5 + 2 = ?')
+name = string.gsub(name,'15','25 - 10 = ?')
+name = string.gsub(name,'39','44 - 5 = ?')
+name = string.gsub(name,'5','12 + 1 - 8 = ?')
+name = string.gsub(name,'16','16 + 16 - 16 = ?')
+name = string.gsub(name,'63','7 . 9 = ?')
+name = string.gsub(name,'81','9 . 9 = ?')
+name = string.gsub(name,'81','9 . 9 - 1 = ?')
+name = string.gsub(name,'42','6 . 7 = ?')
+name = string.gsub(name,'42','6 . 7 - 2 = ?')
+ABS_PROX = '❗️🚸 ⌯ ٱكمڵ ٱڵمعٱدله ٱڵتٱڵيه \n{'..name..'} '
+Dev_Abs(msg.chat_id_, msg.id_, 1,ABS_PROX, 1, 'md')
+end end
+if text == ''..(DevAbs:get(DevProx..'bot:bkbk6'..msg.chat_id_) or 'qssp')..'' then
+if not DevAbs:get(DevProx..'bot:l:id'..msg.chat_id_) then 
+DevAbs:incrby(DevProx..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
+DevAbs:del(DevProx..'bot:bkbk6'..msg.chat_id_)
+ABS_PROX = '❗️🚸 ⌯ ڵقد ربحت وحصڵت عڵى نقطة \n❗️🔑 ⌯ ٱرسڵ ( رياضيات ) ڵڵعب مره ٱخرى \n '
+Dev_Abs(msg.chat_id_, msg.id_, 1,ABS_PROX, 1, 'md')
+end
+DevAbs:set(DevProx..'bot:l:id'..msg.chat_id_,true)
+end  
+if text == 'الانكليزي' or text == 'انكليزيه' or text == 'الانجليزيه' or text == 'انكليزي' then
+if not DevAbs:get(DevProx..'bot:lock_geam'..msg.chat_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️🚸 ⌯ ٱلٱڵعٱب معطڵة \n❗️🔑 ⌯ ٱرسڵ ( تفعيل الالعاب ) ڵڵعب ', 1, 'md')
+else
+DevAbs2 = {'معلومات','قنوات','مجموعات','كتاب','تفاحه','سدني','نقود','اعلم','ذئب','تمساح','ذكي',};
+name = DevAbs2[math.random(#DevAbs2)]
+DevAbs:set(DevProx..'bot:bkbk7'..msg.chat_id_,name) 
+DevAbs:del(DevProx..'bot:l:id'..msg.chat_id_)
+name = string.gsub(name,'ذئب','Wolf')
+name = string.gsub(name,'معلومات','Information')
+name = string.gsub(name,'قنوات','Channels')
+name = string.gsub(name,'مجموعات','Groups')
+name = string.gsub(name,'كتاب','Book')
+name = string.gsub(name,'تفاحه','Apple')
+name = string.gsub(name,'سدني','Sydney')
+name = string.gsub(name,'نقود','money')
+name = string.gsub(name,'اعلم','I know')
+name = string.gsub(name,'تمساح','crocodile')
+name = string.gsub(name,'ذكي','Intelligent')
+ABS_PROX = '❗️🚸 ⌯ مٱ معنى كڵمة {'..name..'} '
+Dev_Abs(msg.chat_id_, msg.id_, 1,ABS_PROX, 1, 'md')
+end end
+if text == ''..(DevAbs:get(DevProx..'bot:bkbk7'..msg.chat_id_) or 'qssp')..'' then
+if not DevAbs:get(DevProx..'bot:l:id'..msg.chat_id_) then 
+DevAbs:incrby(DevProx..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
+DevAbs:del(DevProx..'bot:bkbk7'..msg.chat_id_)
+ABS_PROX = '❗️🚸 ⌯ ڵقد ربحت وحصڵت عڵى نقطة \n❗️🔑 ⌯ ٱرسڵ ( انكليزيه ) ڵڵعب مره ٱخرى \n '
+Dev_Abs(msg.chat_id_, msg.id_, 1,ABS_PROX, 1, 'md')
+end
+DevAbs:set(DevProx..'bot:l:id'..msg.chat_id_,true)
+end  
 --     Source DevProx     --
 if text == 'الالعاب' or text == 'العاب' then
 if not DevAbs:get(DevProx..'bot:lock_geam'..msg.chat_id_) then
@@ -4374,6 +4465,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,[[*
 ❗️📌 ⌯ ٱرسڵ ⌯» ( المختلف ) للعب
 ❗️🎨 ⌯ ٱرسڵ ⌯» ( سمايلات ) للعب
 ❗️🔗 ⌯ ٱرسڵ ⌯» ( المحيبس ) للعب
+❗️🎰 ⌯ ٱرسڵ ⌯» ( رياضيات ) للعب
+❗️🎭 ⌯ ٱرسڵ ⌯» ( انكليزيه ) للعب
 〰️➖〰️➖〰️➖〰️➖〰️
 ❗️🏵 ⌯ CH ⌯» @Dev_Prox
 *]], 1, 'md')
@@ -7273,7 +7366,7 @@ if not is_admin(result.sender_user_id_, result.chat_id_) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '*❗️🎗 ⌯ The user : '..result.sender_user_id_..' \n️❗️🏌🏻‍♂️ ⌯ has been kicked \n ', 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n📮 ⌯ ٱيـۧديـۧه ⌯» ◝ '..ap[2]..' ◟\n🏌🏻‍♂️ ⌯ تـۖم طردة من ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n📮 ⌯ ٱيـۧديـۧه ⌯» ◝ '..result.sender_user_id_..' ◟\n🏌🏻‍♂️ ⌯ تـۖم طردة من ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n', 1, 'md')
 end
 chat_kick(result.chat_id_, result.sender_user_id_)
 end
@@ -7296,7 +7389,7 @@ if not is_admin(result.id_, msg.chat_id_) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 texts = '*❗️🎗 ⌯ The User : '..result.id_..' \n❗️🏌🏻‍♂️ ⌯ has been kicked\n '
 else
-texts = '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n📮 ⌯ ٱيـۧديـۧه ⌯» ◝ '..ap[2]..' ◟\n🏌🏻‍♂️ ⌯ تـۖم طردة من ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n'
+texts = '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n📮 ⌯ ٱيـۧديـۧه ⌯» ◝ '..result.id_..' ◟\n🏌🏻‍♂️ ⌯ تـۖم طردة من ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n'
 end
 chat_kick(msg.chat_id_, result.id_)
 end
@@ -11289,6 +11382,37 @@ DevAbs:sadd(DevProx.."rep_sudo",msg.content_.text_)
 return false 
 end    end
 --     Source DevProx     --
+if msg.content_.text_ == 'حذف اغنيه' then
+DevAbs:set(DevProx.."add:repmusic"..msg.sender_user_id_,'del_rep1music')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ حسنٱ ٱرسـڵ ٱسم ٱلٱغنيه ڵحذفهٱ " ,  1, "md")
+return false
+end
+if msg.content_.text_ then
+local content_text = DevAbs:get(DevProx.."add:repmusic"..msg.sender_user_id_)
+if content_text == 'del_rep1music' then
+Dev_Abs(msg.chat_id_, msg.id_, 1,'❗️🚸 ⌯ ٱلٱغنيه *('..msg.content_.text_..')*\n❗️⚠️ ⌯ تـۖم حـذفهٱ ',  1, "md")
+DevAbs:del(DevProx.."add:repmusic"..msg.sender_user_id_)
+DevAbs:del(DevProx.."voice_repmusic"..msg.content_.text_)
+DevAbs:del(DevProx.."video_repmusic"..msg.content_.text_)
+DevAbs:del(DevProx.."repmusic_sudo",msg.content_.text_)
+return false
+end
+end
+
+if msg.content_.text_ == 'اضف اغنيه' and is_sudo(msg) then
+DevAbs:set(DevProx.."add:repmusic"..msg.sender_user_id_,'set_repmusic')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ حسنٱ ٱرسـڵ ٱسم ٱلٱغنيه ٱلٱن" ,  1, "md")
+return false    end
+if msg.content_.text_ then
+local content_DevAbs2 = DevAbs:get(DevProx.."add:repmusic"..msg.sender_user_id_)
+if content_DevAbs2 == 'set_repmusic' then
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ حسنٱ ٱرسـڵ ٱلٱغنيه ٱلٱن" ,  1, "md")
+DevAbs:set(DevProx.."add:repmusic"..msg.sender_user_id_,'save_repmusic')
+DevAbs:set(DevProx.."addreply3:"..msg.sender_user_id_, msg.content_.text_)
+DevAbs:sadd(DevProx.."repmusic_sudo",msg.content_.text_)
+return false 
+end    end
+--     Source DevProx     --
 if  msg.content_.text_ == 'الردود' and is_owner(msg.sender_user_id_, msg.chat_id_) then
 local redod = DevAbs:smembers(DevProx..'rep_owner'..msg.chat_id_..'')
 if #redod == 0 then
@@ -11352,6 +11476,37 @@ DevAbs:del(DevProx.."text_repall"..v)
 DevAbs:del(DevProx.."rep_sudo",msg.content_.text_)
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ تـۖم حـذف جميع رډوډ ٱڵـمطور" ,  1, "md")
+return false
+end
+end 
+--     Source DevProx     --
+if msg.content_.text_ == "اغاني" or msg.content_.text_ == "الاغاني المضافه" then
+local redod = DevAbs:smembers(DevProx.."repmusic_sudo")
+if #redod == 0 then
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ لٱ تـوجـد ٱغٱني مضـٱفـة" ,  1, "md")
+else
+local i = 1
+msg_rep = '❗️🎒 ⌯ ٱلٱغٱني ٱڵمضٱفه : \n〰️➖〰️➖〰️➖〰️➖〰️\n'
+for k,v in pairs(redod) do
+msg_rep = msg_rep ..k.." ⌯ *{ "..v.." }* \n"
+end
+Dev_Abs(msg.chat_id_, msg.id_, 1, msg_rep,1, "md")
+end
+return false
+end
+--     Source DevProx     --
+if msg.content_.text_ == "حذف الاغاني" and is_sudo(msg) then
+local redod = DevAbs:smembers(DevProx.."repmusic_sudo")
+if #redod == 0 then
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ لٱ تـوجـد ٱغٱني مضـٱفـة" ,  1, "md")
+else
+for k,v in pairs(redod) do
+DevAbs:del(DevProx.."add:repmusic"..v)
+DevAbs:del(DevProx.."voice_repmusic"..v)
+DevAbs:del(DevProx.."video_repmusic"..v)
+DevAbs:del(DevProx.."repmusic_sudo",msg.content_.text_)
+end
+Dev_Abs(msg.chat_id_, msg.id_, 1, "❗️🚸 ⌯ تـۖم حـذف جميع ٱلٱغٱني" ,  1, "md")
 return false
 end
 end 
