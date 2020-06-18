@@ -5923,6 +5923,38 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️☻ تـۖم تـعطيـۧڵ ٱڵـط�
 end
 end
 --     Source DevProx     --
+if text:match("^حظر$") and msg.reply_to_message_id_ ~= 0 then
+if not is_monshid(msg.sender_user_id_, msg.chat_id_) and DevAbs:get("ABS_PROX:lock:ban"..bot_id..msg.chat_id_) then 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️🚸 ⌯ لٱ تستطيع ٱڵـطرد ٱو ٱڵـحظر \n❗️⚠️ ⌯ لٱنة معطل من قبل ٱڵمنشئ ', 1, 'md')
+return "ABS_PROX"
+end
+function ban_by_reply(extra, result, success)
+local user_info_ = DevAbs:get(DevProx..'user:Name' .. result.sender_user_id_)
+local absc9 = user_info_ if user_info_ then
+local abs = 'bot:banned:'..msg.chat_id_
+if not is_admin(result.sender_user_id_, result.chat_id_) then
+if DevAbs:sismember(DevProx..abs, result.sender_user_id_) then
+if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '*❗️🚸 ⌯ The User : ( '..result.sender_user_id_..' )\n❗️🏌🏻‍♂️ ⌯ is already banned \n ', 1, 'md')
+else
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n🔑 ⌯ ٱيـۧديـۧه ⌯» ◝ '..result.sender_user_id_..' ◟\n📣 ⌯ هوَ بٱڵفعڵ محظور في ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n ', 1, 'md')
+end
+chat_kick(result.chat_id_, result.sender_user_id_)
+else
+DevAbs:sadd(DevProx..abs, result.sender_user_id_)
+if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '*❗️🚸 ⌯ The User : ( '..result.sender_user_id_..' )\n❗️🏌🏻‍♂️ ⌯ has been banned \n ', 1, 'md')
+else
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🎗 ⌯ ٱڵـعضو ⌯» ◝ ['..absc9..'] ◟\n🔑 ⌯ ٱيـۧديـۧه ⌯» ◝ '..result.sender_user_id_..' ◟\n📣 ⌯ تـۖم حظرة من ٱڵـمجموعة \n🚸 ⌯ بوٱسـۧطة ⌯» '..abs_rank(msg)..' \n ', 1, 'md')
+end
+chat_kick(result.chat_id_, result.sender_user_id_)
+end
+end
+end
+end
+getMessage(msg.chat_id_, msg.reply_to_message_id_,ban_by_reply)
+end  
+--     Source DevProx     --
 if text:match('^حظر @(.*)$') and is_admin(msg.sender_user_id_, msg.chat_id_) then
 local ap = {string.match(text, '^(حظر) @(.*)$')}
 function ban_by_username(extra, result, success)
