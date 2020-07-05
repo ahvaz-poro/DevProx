@@ -4957,16 +4957,15 @@ end
 --     Source DevProx     --
 if text:match("^source$") or text:match("^Source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") or text:match("^ياسورس$") then 
 local text =  [[
-🗄 ⌯ ❨ Source DevProx ❩
-〰️➖〰️➖〰️➖〰️➖〰️
-📄 ⌯ [Source Channel](https://t.me/Dev_Prox)
-📑 ⌯ [Explanation Source](https://t.me/Exp_Dev)
+➢ Welcome to Nazi Source ◄
 
-📰 ⌯ [Source developer](https://t.me/IQ_ABS)
-🗞 ⌯ [Connection bot](https://t.me/IQA_bot)
+➢ This is a private source ◄
 
-📜 ⌯ [Click here to install](https://t.me/Dev_Prox/573)
-〰️➖〰️➖〰️➖〰️➖〰️
+➢ To contact the source owner ◄
+
+➢ [Touch here](t.me/qqqaq) ◄
+
+➣  [Channel source](t.me/vip_es) ◄
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
@@ -5034,7 +5033,7 @@ if text:match("^رابط حذف$") or text:match("^رابط الحذف$") or tex
  
 local text =  [[
 ❗️🚸 ⌯ [ اضغط هنا لحذف الحساب ](https://telegram.org/deactivate) 
-❗️🔑 ⌯ [ اضغط هنا لديك مفاجئه ](https://t.me/Dev_Prox)
+❗️🔑 ⌯ [ اضغط هنا لديك مفاجئه ](https://t.me/vip_es)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
