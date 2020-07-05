@@ -1108,7 +1108,7 @@ ChekName = utf8.sub(Name,0,Num) Name = ChekName return Name..''
 end
 --     Source DevProx     --
 local abs_rank = function(msg)
-if tonumber(msg.sender_user_id_) == tonumber(218385683) then
+if tonumber(msg.sender_user_id_) == tonumber(84482054) then
 ABS_PROX  = "ٱڵمبرمج"
 elseif is_leaderid(msg.sender_user_id_) then
 ABS_PROX  = "ٱڵمطۄر"
@@ -4585,7 +4585,7 @@ end
 --     Source DevProx     --
 if text:match("^رتبتي$") and Abbas_Abs(msg) then
 function get_rtba(extra,result,success)
-if tonumber(result.id_) == tonumber(218385683) then
+if tonumber(result.id_) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(result.id_) == tonumber(bot_owner) then
 t = 'ٱڵمطۄر ٱلٱسٱسي'
@@ -4633,7 +4633,7 @@ local Photo = (tonumber(DevAbs:get(DevProx.."Photo:"..msg.sender_user_id_..":"..
 local Voice = (tonumber(DevAbs:get(DevProx.."Voice:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
 local Gif = (tonumber(DevAbs:get(DevProx.."Gif:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
 local Video = (tonumber(DevAbs:get(DevProx.."Video:"..msg.sender_user_id_..":"..msg.chat_id_.."")) or "0" )
-if tonumber(result.id_) == tonumber(218385683) then
+if tonumber(result.id_) == tonumber(84482054) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 t = 'Source programmer'
 else
@@ -4782,7 +4782,7 @@ elseif da.status_.ID == "ChatMemberStatusMember" then
 rank_gps = 'عضو'
 end
 if result.id_ then
-if tonumber(result.sender_user_id_) == tonumber(218385683) then
+if tonumber(result.sender_user_id_) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 t = 'ٱڵمطۄر ٱلٱسٱسي'
@@ -6726,7 +6726,7 @@ end end end
 --     Source DevProx     --
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 and Abbas_Abs(msg) or text ==("ايدي") and msg.reply_to_message_id_ ~= 0 and Abbas_Abs(msg) then 
 function id_by_reply(extra, result, success) 
-if tonumber(result.sender_user_id_) == tonumber(218385683) then
+if tonumber(result.sender_user_id_) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(result.sender_user_id_) == tonumber(bot_id) then
 t = 'هذٱ ٱڵبوت'
@@ -6840,7 +6840,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,grr, 1, 'md')
 end
 return false  end
 if res.id_ then  
-if tonumber(res.id_) == tonumber(218385683) then
+if tonumber(res.id_) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(res.id_) == tonumber(bot_id) then
 t = 'هذٱ ٱڵبوت'
@@ -6929,7 +6929,7 @@ return false
 end
 if text and text:match('كشف (%d+)') and Abbas_Abs(msg) or text:match('ايدي (%d+)') and Abbas_Abs(msg) then 
 local iduser = text:match('كشف (%d+)') or text:match('ايدي (%d+)')  
-if tonumber(iduser) == tonumber(218385683) then
+if tonumber(iduser) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(iduser) == tonumber(bot_id) then
 t = 'هذٱ ٱڵبوت'
@@ -7216,7 +7216,7 @@ t = 'Member'
 end
 end
 if not DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
-if tonumber(result.id_) == tonumber(218385683) then
+if tonumber(result.id_) == tonumber(84482054) then
 t = 'مبرمج ٱڵسورس'
 elseif tonumber(result.id_) == tonumber(bot_owner) then
 t = 'ٱڵمطۄر ٱلٱسٱسي'
@@ -7452,7 +7452,7 @@ local user_nkt = tonumber(DevAbs:get(DevProx..'bot:add:num'..msg.chat_id_..msg.s
 local cont = (tonumber(DevAbs:get(DevProx..'bot:user:add'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
 local msguser = tonumber(DevAbs:get(DevProx..'user:msgs'..msg.chat_id_..':'..msg.sender_user_id_))
 if result.photos_[0] then
-if tonumber(msg.sender_user_id_) == tonumber(218385683) then
+if tonumber(msg.sender_user_id_) == tonumber(84482054) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 t = 'Source programmer'
 else
@@ -7550,7 +7550,7 @@ local new_id = new_id:gsub('rank',(t or 'لا يوجد'))
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,new_id,msg.id_,msg.id_.."")
 end
 else
-if tonumber(msg.sender_user_id_) == tonumber(218385683) then
+if tonumber(msg.sender_user_id_) == tonumber(84482054) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 t = 'Source programmer'
 else
@@ -7654,7 +7654,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '❗️🚸 ⌯ عذرٱ ٱلٱيدي مۘعط
 end
 end
 else
-if tonumber(msg.sender_user_id_) == tonumber(218385683) then
+if tonumber(msg.sender_user_id_) == tonumber(84482054) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 t = 'Source programmer'
 else
@@ -7741,7 +7741,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⚠️ ⌯ لٱ ٱستطيع عرض صورتک \n📛 ⌯ ربمٱ لٱ تمتڵك صورة شخصية \n📛 ⌯ ٱو ٱنك قمت بحظر ٱڵـبوت \n📛 ⌯ ٱو ٱنك قفڵتهٱ من ٱلٱعدٱدٱت \n〰️➖〰️➖〰️➖〰️➖〰️\n📰 ⌯ معرفک ⌯» ❨ "..username.." ❩\n💳 ⌯ ٱيـډيک ⌯» ❨ "..msg.sender_user_id_.." ❩\n📑 ⌯ رتـبتک ⌯» ❨ "..t.." ❩\n📽 ⌯ صورک ⌯» ❨ "..result.total_count_.." ❩\n📋 ⌯ رسٱئڵک ⌯» ❨ "..(user_msgs + Dev_Abss).." • "..(ABS_PROX).." ❩\n🎙 ⌯ تفٱعڵک ⌯» ❨ "..formsgg(msguser).." ❩\n📂 ⌯ جـهٱتک ⌯» ❨ "..cont.." ❩\n📃 ⌯ نقاطک ⌯» ❨ "..user_nkt.." ❩\n🧷 ⌯ مڵصقٱتک ⌯» ❨ "..sticker.." ❩\n〰️➖〰️➖〰️➖〰️➖〰️\n", 1, 'html')
 end
 else
-if tonumber(msg.sender_user_id_) == tonumber(218385683) then
+if tonumber(msg.sender_user_id_) == tonumber(84482054) then
 if DevAbs:get(DevProx..'lang:gp:'..msg.chat_id_) then
 t = 'Source programmer'
 else
