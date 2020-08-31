@@ -4483,7 +4483,7 @@ message_ids_= {[0] = msg.id_}
 dl_cb, nil)
 DevAbs:set(DevProx.."HM:"..msg.chat_id_..msg.id_..res2.id_,for_abs[1])
 function bot_id_get(ros1,ros2)
-bot_username = (ros2.username_ or "DEVIRAQ_BOT")
+bot_username = ros2.username_
 function Abbas(ross1,ross2)
 local hms = msg.sender_user_id_
 if ross2.username_ then 
@@ -4495,11 +4495,7 @@ getUser(msg.sender_user_id_, Abbas)
 end
 getUser(bot_id, bot_id_get)
 end
-tdcli_function ({
-ID = "GetChatMember",
-chat_id_ = msg.chat_id_,
-user_id_ = res2.id_
-}, hamssss, nil)
+tdcli_function ({ ID = "GetChatMember", chat_id_ = msg.chat_id_, user_id_ = res2.id_ }, hamssss, nil)
 end
 resolve_username(for_abs[2],hamss) 
 end
@@ -4540,7 +4536,7 @@ end
 --     Source DevProx     --
 if is_SudoBot(msg.sender_user_id_, msg.chat_id_) then
 if text ==  ""..name_bot..' غادر' or text == 'غادر' then
-if DevAbs:get(DevProx.."Left:Bot") and not is_leader(msg) then
+if DevAbs:get(DevProx.."Left:Bot"..bot_id) and not is_leader(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "☬︙ٱڵمغٱدره معطڵه من قبڵ ٱڵمطور ٱلٱسٱسي", 1, 'md')
 return false  
 end
@@ -8546,12 +8542,12 @@ if is_leader(msg) then
 if text == 'تفعيل المغادره' or text == '↫ تفعيل المغادره ☬' then   
 local ABS_PROX = '☬︙ٱهلٱ عزيزي ↫ '..abs_rank(msg)..' \n☬︙تـۖم تـفعيـۧڵ ٱڵمغٱدرة بنجٱح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ABS_PROX, 15, string.len(msg.sender_user_id_))
-DevAbs:del(DevProx.."Left:Bot")
+DevAbs:del(DevProx.."Left:Bot"..bot_id)
 end
 if text == 'تعطيل المغادره' or text == '↫ تعطيل المغادره ☬' then  
 local ABS_PROX = '☬︙ٱهلٱ عزيزي ↫ '..abs_rank(msg)..' \n☬︙تـۖم تـعطيـۧڵ ٱڵمغٱدرة بنجٱح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, ABS_PROX, 15, string.len(msg.sender_user_id_))
-DevAbs:set(DevProx.."Left:Bot") 
+DevAbs:set(DevProx.."Left:Bot"..bot_id,true) 
 end end
 --     Source DevProx     --
 if text and text:match("^ضع اسم (.*)$") and is_owner(msg.sender_user_id_, msg.chat_id_) and Abbas_Abs(msg) then
@@ -8574,10 +8570,10 @@ else
 local list = DevAbs:smembers(DevProx.."bot:groups")
 local t = '☬︙مجموعٱت ٱڵـبوت ↫ ⤈ \n'
 for k,v in pairs(list) do
-t = t..k.." • {`"..v.."`}\n" 
+t = t..k.." ⌯ ❨`"..v.."`❩\n" 
 end
 if #list == 0 then
-t = '☬︙لٱ يوجد مجموعٱت مفعڵة '
+t = '☬︙لٱ يوجد مجموعٱت مفعڵة'
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end end
