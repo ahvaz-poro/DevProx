@@ -4390,7 +4390,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,[[
 ☬︙ٱرسڵ ↫ ( رياضيات ) للعب
 ☬︙ٱرسڵ ↫ ( انكليزيه ) للعب
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-☬︙[𝗧𝗘𝗔𝗠 𝗗𝗘𝗩](https://t.me/Dev_Prox)
+☬︙[𝗧𝗘𝗔𝗠 𝗗𝗘𝗩](https://t.me/vip_es)
 ]], 1, 'md')
 end
 end
@@ -4644,7 +4644,6 @@ local text =  [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 --     Source DevProx     --
-if Chat_Type == 'sp' or Chat_Type == 'gp'  then
 if text:match("^اطردني$") and Abbas_Abs(msg) or text:match("^ادفرني$") and Abbas_Abs(msg) then
 if not DevAbs:get(DevProx.."lock_kickme"..msg.chat_id_) then
 DevAbs:set(DevProx..'yes'..msg.sender_user_id_..'', 'kickyes')
@@ -4704,7 +4703,7 @@ i = i + 1
 if DevAbs:get(DevProx..'user:Name'..v.user_id_) then
 text = text..""..i.." ⌯ ❨ ["..DevAbs:get(DevProx..'user:Name'..v.user_id_).."] ❩\n"
 else
-text = text..""..i.." ⌯ ❨ ["..v.user_id_.."](tg://user?id="..v.user_id_..") ❩\n"
+text = text..""..i.." ⌯ ❨ "..v.user_id_.." ❩\n"
 end
 end 
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -4726,7 +4725,7 @@ i = i + 1
 if DevAbs:get(DevProx..'user:Name'..v.user_id_) then
 text = text..""..i.." ⌯ ❨ ["..DevAbs:get(DevProx..'user:Name'..v.user_id_).."] ❩\n"
 else
-text = text..""..i.." ⌯ ❨ ["..v.user_id_.."](tg://user?id="..v.user_id_..") ❩\n"
+text = text..""..i.." ⌯ ❨ "..v.user_id_.." ❩\n"
 end
 end 
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
@@ -4736,6 +4735,7 @@ tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).I
 end
 end
 --     Source DevProx     --
+if Chat_Type == 'sp' or Chat_Type == 'gp'  then
 if text:match("^رسائلي$") and msg.reply_to_message_id_ == 0 and Abbas_Abs(msg) then
 local user_msgs = DevAbs:get(DevProx..'user:msgs'..msg.chat_id_..':'..msg.sender_user_id_)
 local ABS_PROX = DevAbs:get(DevProx..'user:msgs'..bot_id..os.date('%d')..':'..msg.chat_id_..':'..msg.sender_user_id_) or 0
@@ -5547,7 +5547,7 @@ elseif masco(msg.sender_user_id_,msg.chat_id_) == 'owner' then
 DevAbs:srem(DevProx..'abs:admins:'..msg.chat_id_, result.id_)
 DevAbs:srem(DevProx..'abs:vipmem:'..msg.chat_id_, result.id_)
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙*ٱڵمعرف غير صحيح*', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙ٱڵمعرف غير صحيح*', 1, 'md')
 end
 end
 resolve_username(rem[2],remm)
@@ -7088,19 +7088,14 @@ end
 else
 if not DevAbs:get('DevProx:id:mute'..msg.chat_id_) then
 if not DevAbs:get('DevProx:id:photo'..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "☬︙لٱ ٱستطيع عرض صورتک\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙معرفک ↫ ❨ "..username.." ❩\n☬︙ٱيـډيک ↫ ❨ "..msg.sender_user_id_.." ❩\n☬︙رتـبتک ↫ ❨ "..id_rank(msg).." ❩\n☬︙صورک ↫ ❨ "..result.total_count_.." ❩\n☬︙رسٱئڵک ↫ ❨ "..(user_msgs + Dev_Abss).." • "..(ABS_PROX).." ❩\n☬︙تفٱعڵک ↫ ❨ "..formsgg(msguser).." ❩\n☬︙جـهٱتک ↫ ❨ "..cont.." ❩\n☬︙نقاطک ↫ ❨ "..user_nkt.." ❩\n☬︙مڵصقٱتک ↫ ❨ "..sticker.." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n", 1, 'html')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "☬︙لٱ ٱستطيع عرض صورتک لٱنك قمت بحظر ٱڵـبوت ٱو ٱنك لٱتمتڵك صوره في بروفٱيڵك\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙معرفک ↫ ❨ "..username.." ❩\n☬︙ٱيـډيک ↫ ❨ "..msg.sender_user_id_.." ❩\n☬︙رتـبتک ↫ ❨ "..id_rank(msg).." ❩\n☬︙صورک ↫ ❨ "..result.total_count_.." ❩\n☬︙رسٱئڵک ↫ ❨ "..(user_msgs + Dev_Abss).." • "..(ABS_PROX).." ❩\n☬︙تفٱعڵک ↫ ❨ "..formsgg(msguser).." ❩\n☬︙جـهٱتک ↫ ❨ "..cont.." ❩\n☬︙نقاطک ↫ ❨ "..user_nkt.." ❩\n☬︙مڵصقٱتک ↫ ❨ "..sticker.." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n", 1, 'html')
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "\n☬︙معرفک ↫ ❨ "..username.." ❩\n☬︙ٱيـډيک ↫ ❨ "..msg.sender_user_id_.." ❩\n☬︙رتـبتک ↫ ❨ "..id_rank(msg).." ❩\n☬︙صورک ↫ ❨ "..result.total_count_.." ❩\n☬︙رسٱئڵک ↫ ❨ "..(user_msgs + Dev_Abss).." • "..(ABS_PROX).." ❩\n☬︙تفٱعڵک ↫ ❨ "..formsgg(msguser).." ❩\n☬︙نقاطک ↫ ❨ "..user_nkt.." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n", 1, 'html')
 end
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙عذرٱ ٱلٱيدي مۘعطڵ', 1, 'md')
 end end end
-tdcli_function ({
-ID = "GetUserProfilePhotos",
-user_id_ = msg.sender_user_id_,
-offset_ = 0,
-limit_ = 1
-}, getpro, nil)
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
 getUser(msg.sender_user_id_, ABS_PROX)
 end
@@ -8440,7 +8435,7 @@ local TXTE = "☬︙اعدادات المجموعة ↫ ⤈\n┉ ≈ ┉ ≈ ┉
 .."☬︙خٱصية ٱڵتكرٱر ↫ "..floodstatus.."\n"
 .."☬︙عدد ٱڵتكرٱر ↫ [ "..flood_m.." ]\n"
 .."☬︙عدد ٱڵسبٱم ↫ [ "..spam_c.." ]\n"
-.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙[𝗧𝗘𝗔𝗠 𝗗𝗘𝗩](https://t.me/Dev_Prox)\n"
+.."┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙[𝗧𝗘𝗔𝗠 𝗗𝗘𝗩](https://t.me/vip_es)\n"
 Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
@@ -8573,7 +8568,7 @@ for k,v in pairs(list) do
 t = t..k.." ⌯ ❨`"..v.."`❩\n" 
 end
 if #list == 0 then
-t = '☬︙لٱ يوجد مجموعٱت مفعڵة'
+t = '☬︙*لٱ يوجد مجموعٱت مفعڵة*'
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end end
@@ -8674,10 +8669,7 @@ end
 DevAbs:set(DevProx.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "@Dev_Prox")) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "☬︙ٱڵـمجموعة ↫ ( ["..title_name(chattid).."]("..(t2.invite_link_ or "t.me/Dev_Prox")..") )\n☬︙ٱلٱيـدي ↫ ( *"..msg.chat_id_.."* )\n☬︙ٱڵـمنشئ ↫ ( ["..monsh.."] )\n☬︙عدد ٱڵـمـدرٱء ↫ ( *"..Owner.."* )\n☬︙عدد ٱڵـمنشئين ↫ ( *"..Monsh.."* )\n☬︙عدد ٱلٱدمنية ↫ ( *"..admins.."* )\n☬︙عدد ٱڵـمميزين ↫ ( *"..Vip.."* )\n☬︙عدد ٱڵـمحظورين ↫ ( *"..Baned.."* )\n☬︙عدد ٱڵـمقيدين ↫ ( *"..Tkeed.."* )\n☬︙عدد ٱڵـمكتومين ↫ ( *"..Muted.."* )", 1,"md")
 end
-tdcli_function ({
-ID = "GetChannelFull",
-channel_id_ = getChatId(chattid).ID
-}, DevProx3, nil)
+tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(chattid).ID }, DevProx3, nil)
 end
 openChat(msg.chat_id_,ABS_PROX) 
 end
@@ -8826,10 +8818,7 @@ end
 DevAbs:set(DevProx.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "لايوجد")) 
 Dev_Abs(tostring((DevAbs:get(DevProx.."bot:leader:gr") or DevId)), 0, 1, "☬︙تم تفعيل مجموعه جديده ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙ايدي الضافني ↫ ❨ "..msg.sender_user_id_.." ❩\n☬︙معرف الضافني ↫ ❨ @"..(result.username_ or "لا يوجد").." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙معلومات المجموعه ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙اسم المجموعه ↫ ❨ "..f2.title_.." ❩\n☬︙ايدي المجموعه ↫ ⤈ \n❨ "..msg.chat_id_.." ❩\n☬︙رابط المجموعه ↫ ⤈\n❨ "..(t2.invite_link_ or "لايوجد").." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙ٱڵوقت ↫ "..os.date("%I:%M%p").." \n☬︙ٱڵتٱريخ ↫ "..os.date("%Y/%m/%d").."" , 1, 'html') 
 end
-tdcli_function ({
-ID = "GetChannelFull",
-channel_id_ = getChatId(msg.chat_id_).ID
-}, DevProx3, nil)
+tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, DevProx3, nil)
 end
 openChat(msg.chat_id_,ABS_PROX) 
 DevAbs:set(DevProx.."bot:enable:"..msg.chat_id_,true)
@@ -8895,10 +8884,7 @@ end
 DevAbs:set(DevProx.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "لايوجد")) 
 Dev_Abs(tostring((DevAbs:get(DevProx.."bot:leader:gr") or DevId)), 0, 1, "☬︙هناك من بحاجه الى مساعده ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙ايدي الشخص ↫ ❨ "..msg.sender_user_id_.." ❩\n☬︙معرف الشخص ↫ ❨ @"..(result.username_ or "لا يوجد").." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙معلومات المجموعه ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙اسم المجموعه ↫ ❨ "..f2.title_.." ❩\n☬︙ايدي المجموعه ↫ ⤈ \n❨ "..msg.chat_id_.." ❩\n☬︙رابط المجموعه ↫ ⤈ \n❨ "..(t2.invite_link_ or "لايوجد").." ❩\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n☬︙ٱڵوقت ↫ "..os.date("%I:%M%p").." \n☬︙ٱڵتٱريخ ↫ "..os.date("%Y/%m/%d").."" , 1, 'html') 
 end
-tdcli_function ({
-ID = "GetChannelFull",
-channel_id_ = getChatId(msg.chat_id_).ID
-}, DevProx3, nil)
+tdcli_function ({ ID = "GetChannelFull", channel_id_ = getChatId(msg.chat_id_).ID }, DevProx3, nil)
 end
 openChat(msg.chat_id_,ABS_PROX) 
 end
@@ -9878,7 +9864,7 @@ end end
 if text == "تحديث السورس" and is_leader(msg) or text == "تحديث سورس" and is_leader(msg) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙جٱري تـۧحډيث سۄرس ډيف برۄكس', 1, 'md') 
 os.execute('rm -rf DevProx.lua') 
-os.execute('wget https://raw.githubusercontent.com/iq0abs/DevProx/master/DevProx.lua') 
+os.execute('wget https://raw.githubusercontent.com/ahvaz-poro/DevProx/master/DevProx.lua') 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '☬︙تـۖم ٱڵتـۧحډيث ٱڵى ٱلٱصدٱر ٱڵجډيـډ', 1, 'md') 
 dofile('DevProx.lua') 
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
