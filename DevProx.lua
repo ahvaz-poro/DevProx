@@ -4636,15 +4636,14 @@ end
 --     Source DevProx     --
 if text:match("^source$") or text:match("^Source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") or text:match("^ياسورس$") then 
 local text =  [[
-➢ Welcome to Nazi Source ◄
-
-➢ This is a private source ◄
-
-➢ To contact the source owner ◄
-
-➢ [Touch here](t.me/qqqaq) ◄
-
-➣ [Channel source](t.me/vip_es) ◄
+♯﹅ [sᴏᴜʀᴄᴇ](t.me/vip_es)  ✘ #[ɴᴀᴢɪ](t.me/Nazi_ibot) ✘
+   ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+♯﹅ [ᴄʜ sᴏᴜʀᴄᴇ](t.me/vip_es) ✘ 
+   ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+♯﹅ [ᴅᴇᴠᴇʟᴏᴘᴇʀ](t.me/qqqaq)  ✘ 
+♯﹅ [ʙᴏᴛ ᴅᴇᴠʟᴏᴘᴇʀ](t.me/q3qbot) ✘
+   ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+   [𝗧𝗛𝗜𝗦 𝗜𝗦 𝗔 𝗣𝗥𝗜𝗩𝗔𝗧𝗘 𝗦𝗢𝗨𝗥𝗖𝗘](t.me/vip_es)
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
